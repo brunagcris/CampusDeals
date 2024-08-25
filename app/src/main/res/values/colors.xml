@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red_ufop">#931f38</color>
+    <color name="red_ufop_2">#aa5868</color>
+    <color name="red_ufop_3">#bf828c</color>
+    <color name="gray_ufop">#616369</color>
+    <color name="gray_ufop_2">#96969b</color>
+    <color name="gray_ufop_3">#acacb4</color>
+    <color name="white_ufop">#dfdedf</color>
+    <color name="blue_link">#157DD0</color>
+</resources>

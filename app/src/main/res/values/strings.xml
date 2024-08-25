@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Campus Deals</string>
+    <string name="sign_up_txt"><u>Não possui conta?</u></string>
+    <string name="sign_in_txt"><u>Já possuo conta</u></string>
+    <string name="sign_up_title">Crie uma conta</string>
+    <string name="sign_up_btn">Cadastre-se</string>
+    <string name="login_btn">Entrar</string>
+</resources>

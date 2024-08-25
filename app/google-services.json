@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "651002355325",
+    "project_id": "campus-d-teste",
+    "storage_bucket": "campus-d-teste.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:651002355325:android:343c840070fa84e7149b14",
+        "android_client_info": {
+          "package_name": "com.example.campusdeals"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBezlw7r4hbo33-r2lG96aNLfsHhwvn1BQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
