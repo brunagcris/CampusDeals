@@ -5,4 +5,7 @@
     <string name="sign_up_title">Crie uma conta</string>
     <string name="sign_up_btn">Cadastre-se</string>
     <string name="login_btn">Entrar</string>
+    <string name="anuncios_menu">Meus anúncios</string>
+    <string name="sair_menu">Sair</string>
+    <string name="cadastrar_entrar_menu">Cadastrar / Entrar</string>
 </resources>

@@ -19,7 +19,6 @@ import com.example.campusdeals.R;
 import com.example.campusdeals.helper.ConfiguracaoFirebase;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.Firebase;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
@@ -68,7 +67,7 @@ public class SignUpActivity extends AppCompatActivity {
                                             "Cadastro realizado com sucesso!",
                                             Toast.LENGTH_SHORT).show();
 
-                                    Intent intent = new Intent(SignUpActivity.this,MainActivity.class);
+                                    Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
                                     startActivity(intent);
                                 }else {
                                     String exeption = "";
@@ -107,7 +106,7 @@ public class SignUpActivity extends AppCompatActivity {
         txtSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SignUpActivity.this,MainActivity.class);
+                Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
                 startActivity(intent);
 
 

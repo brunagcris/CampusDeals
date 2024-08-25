@@ -2,7 +2,6 @@ package com.example.campusdeals.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,13 +22,10 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
-import com.google.firebase.auth.FirebaseAuthInvalidUserException;
-import com.google.firebase.auth.FirebaseAuthUserCollisionException;
-import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 
 import java.util.Objects;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     private Button loginBtn;
     private TextView txt_sign_up;
@@ -41,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -66,11 +62,11 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()){
-                                    Toast.makeText(MainActivity.this,
+                                    Toast.makeText(LoginActivity.this,
                                             "Logado com sucesso",
                                             Toast.LENGTH_SHORT).show();
 
-                                    Intent intent = new Intent(MainActivity.this,FeedActivity.class);
+                                    Intent intent = new Intent(LoginActivity.this, AnunciosActivity.class);
                                     startActivity(intent);
                                 }else{
 
@@ -84,19 +80,19 @@ public class MainActivity extends AppCompatActivity {
                                         throw new RuntimeException(e);
                                     }
 
-                                    Toast.makeText(MainActivity.this,
+                                    Toast.makeText(LoginActivity.this,
                                              exception,
                                             Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });
                     }else{
-                        Toast.makeText(MainActivity.this,
+                        Toast.makeText(LoginActivity.this,
                                 "Preencha a senha!",
                                 Toast.LENGTH_LONG).show();
                     }
                 }else{
-                    Toast.makeText(MainActivity.this,
+                    Toast.makeText(LoginActivity.this,
                             "Preencha o E-mail!",
                             Toast.LENGTH_LONG).show();
                 }
@@ -106,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
         txt_sign_up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,SignUpActivity.class);
+                Intent intent = new Intent(LoginActivity.this,SignUpActivity.class);
                 startActivity(intent);
             }
         });

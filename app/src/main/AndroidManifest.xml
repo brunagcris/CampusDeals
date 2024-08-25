@@ -13,13 +13,13 @@
         android:theme="@style/Theme.CampusDeals"
         tools:targetApi="31">
         <activity
-            android:name=".activity.FeedActivity"
+            android:name=".activity.LoginActivity"
             android:exported="false" />
         <activity
             android:name=".activity.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.MainActivity"
+            android:name=".activity.AnunciosActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
