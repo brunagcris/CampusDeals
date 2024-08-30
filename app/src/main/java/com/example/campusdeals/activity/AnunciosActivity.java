@@ -68,8 +68,10 @@ public class AnunciosActivity extends AppCompatActivity {
                     "Deslogado com sucesso!",
                     Toast.LENGTH_LONG).show();
 
+        }else if (item.getItemId() ==R.id.menu_anuncios)
+        {
+            startActivity( new Intent(getApplicationContext(), MeusAnunciosActivity.class));
         }
-
         return super.onOptionsItemSelected(item);
     }
 }
