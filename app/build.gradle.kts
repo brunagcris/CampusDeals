@@ -53,4 +53,12 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    //dep marcara moeda
+    implementation ("com.github.santalu:maskara:1.0.0")
+    implementation("com.github.BlacKCaT27:CurrencyEditText:2.0.2")
+
+    //dep mascara telefone
+    implementation ("com.github.santalu:maskara:1.0.0")
+
 }

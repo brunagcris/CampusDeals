@@ -4,6 +4,9 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="colorPrimary">@color/red_ufop</item>
+        <item name="colorPrimaryDark">@color/gray_ufop</item>
+        <item name="colorAccent">@android:color/white</item>
+
 
     </style>
 
