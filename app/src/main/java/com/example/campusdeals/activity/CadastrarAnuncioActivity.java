@@ -79,7 +79,6 @@ public class CadastrarAnuncioActivity extends AppCompatActivity
 
     }
 
-
     @Override
     public void onClick(View v) {
 
