@@ -115,7 +115,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_edit_text"
-            android:onClick="salvarAnuncio"
+            android:onClick="validarDadosAnuncio"
             android:text="Cadastrar anúncio" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
