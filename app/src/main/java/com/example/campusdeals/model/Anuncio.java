@@ -35,15 +35,17 @@ public class Anuncio implements Serializable {
                 .child(getIdAnuncio())
                 .setValue(this);
 
-        /* Salvar um anúncio público (visível para todos os usuários)
-        DatabaseReference anuncioPublicoRef = ConfiguracaoFirebase.getFirebase()
+        salvarAnuncioPublico();
+    }
+
+    public void salvarAnuncioPublico() {
+
+        DatabaseReference anuncioRef = ConfiguracaoFirebase.getFirebase()
                 .child("anuncios");
-        anuncioPublicoRef.child(getEstado())
+        anuncioRef.child(getEstado())
                 .child(getCategoria())
                 .child(getIdAnuncio())
                 .setValue(this);
-
-         */
     }
 
     // Getters e Setters
