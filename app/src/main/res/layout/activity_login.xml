@@ -25,7 +25,7 @@
                 android:layout_width="391dp"
                 android:layout_height="290dp"
                 android:layout_margin="16dp"
-                android:layout_marginBottom="116dp"
+                android:layout_marginBottom="110dp"
                 android:background="#0FFFFFFF"
                 android:gravity="center"
                 android:orientation="vertical"
@@ -40,7 +40,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="90dp"
+                    android:layout_marginTop="100dp"
                     android:layout_marginRight="20dp"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/bg_edit_text"
@@ -66,8 +66,10 @@
                     android:id="@+id/login_btn"
                     android:layout_width="346dp"
                     android:layout_height="60dp"
+                    android:layout_marginTop="20dp"
                     android:backgroundTint="@color/red_ufop"
-                    android:text="Entrar" />
+                    android:text="ENTRAR"
+                    android:textSize="17sp" />
 
                 <TextView
                     android:id="@+id/sign_up_txt"
@@ -75,9 +77,11 @@
                     android:layout_height="42dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginBottom="50dp"
+                    android:paddingTop="8dp"
                     android:text="Não tem uma conta? Registre-se"
                     android:textAlignment="center"
                     android:textColor="@color/blue_link"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -100,16 +104,15 @@
                 android:id="@+id/imageView8"
                 android:layout_width="300dp"
                 android:layout_height="300dp"
-                android:layout_marginTop="24dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/collapsingToolbarLayout"
+                app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/logo" />
 
             <ImageView
                 android:id="@+id/imageView14"
-                android:layout_width="300dp"
+                android:layout_width="380dp"
                 android:layout_height="100dp"
                 app:layout_constraintBottom_toTopOf="@+id/linearLayout"
                 app:layout_constraintEnd_toEndOf="parent"
