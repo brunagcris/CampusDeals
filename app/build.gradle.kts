@@ -61,4 +61,8 @@ dependencies {
     //dep mascara telefone
     implementation ("com.github.santalu:maskara:1.0.0")
 
+    implementation("com.android.support:cardview-v7:28.0.0")
+
+    //dep para picasso
+    implementation ("com.squareup.picasso:picasso:2.8")
 }
