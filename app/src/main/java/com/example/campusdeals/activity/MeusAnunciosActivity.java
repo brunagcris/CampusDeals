@@ -1,11 +1,13 @@
 package com.example.campusdeals.activity;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.campusdeals.adapter.AdapterAnuncios;
 import com.example.campusdeals.helper.ConfiguracaoFirebase;
+import com.example.campusdeals.helper.RecyclerItemClickListener;
 import com.example.campusdeals.model.Anuncio;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -13,6 +15,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ProgressBar;
 import android.widget.Toolbar;
 
 import androidx.navigation.NavController;
@@ -43,6 +47,7 @@ public class MeusAnunciosActivity extends AppCompatActivity {
     private List<Anuncio> anuncios = new ArrayList<>();
     private AdapterAnuncios adapterAnuncios;
     private DatabaseReference anuncioUsuarioRef;
+    private AlertDialog dialog;
 
     @SuppressLint("RestrictedApi")
     @Override
@@ -75,11 +80,55 @@ public class MeusAnunciosActivity extends AppCompatActivity {
 
         recyclerAnuncios.setAdapter(adapterAnuncios);
 
+        //recupera anuncios para o usuario
         recuperarAnuncios();
+
+        //adiciona evento de clique no recyclerview
+        recyclerAnuncios.addOnItemTouchListener(
+                new RecyclerItemClickListener(
+                        this,
+                        recyclerAnuncios,
+                        new RecyclerItemClickListener.OnItemClickListener() {
+                            @Override
+                            public void onItemClick(View view, int position) {
+
+                            }
+
+                            @Override
+                            public void onLongItemClick(View view, int position) {
+
+                                Anuncio anuncioSelecionado = anuncios.get(position);
+                                anuncioSelecionado.remover();
+
+                                adapterAnuncios.notifyDataSetChanged();
+
+                            }
+
+                            @Override
+                            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                            }
+                        }
+                )
+        );
+
 
     }
 
     private void recuperarAnuncios(){
+
+        // Criar um ProgressBar
+        ProgressBar progressBar = new ProgressBar(this);
+        progressBar.setIndeterminate(true); // Estilo de barra indeterminada
+
+        // Configurar o AlertDialog
+        androidx.appcompat.app.AlertDialog dialog = new androidx.appcompat.app.AlertDialog.Builder(this)
+                .setTitle("Carregando Anúncios")
+                .setView(progressBar) // Adicionar o ProgressBar no diálogo
+                .setCancelable(false) // Não permite cancelar
+                .create();
+
+        dialog.show(); // Exibe o diálogo
 
         anuncioUsuarioRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -92,6 +141,8 @@ public class MeusAnunciosActivity extends AppCompatActivity {
 
                 Collections.reverse(anuncios);
                 adapterAnuncios.notifyDataSetChanged();
+
+                dialog.dismiss();
 
             }
 
