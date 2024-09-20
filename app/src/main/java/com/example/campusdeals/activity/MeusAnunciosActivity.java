@@ -54,6 +54,8 @@ public class MeusAnunciosActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        getSupportActionBar().setTitle("Meus anúncios");
+
         binding = ActivityMeusAnunciosBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 //        setSupportActionBar(binding.toolbar);

@@ -72,6 +72,9 @@ public class CadastrarAnuncioActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastrar_anuncio);
 
+        getSupportActionBar().setTitle("Cadastrar produto");
+
+
         //Configurações iniciais
         storage = ConfiguracaoFirebase.getFirebaseStorage();
 

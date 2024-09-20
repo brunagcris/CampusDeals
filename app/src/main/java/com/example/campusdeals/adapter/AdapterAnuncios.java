@@ -61,7 +61,7 @@ public class AdapterAnuncios extends RecyclerView.Adapter<AdapterAnuncios.MyView
         public MyViewHolder(View itemView){
             super(itemView);
 
-            titulo = itemView.findViewById(R.id.textTitulo);
+            titulo = itemView.findViewById(R.id.textTituloDetalhe);
             valor = itemView.findViewById(R.id.textPreco);
             foto = itemView.findViewById(R.id.imageAnuncio);
 

@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
     <!-- permissoes internet -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-    <!-- permissoes galeria/camera -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- permissoes galeria/camera -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-
-
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -24,20 +19,29 @@
         android:theme="@style/Theme.CampusDeals"
         tools:targetApi="31">
         <activity
+            android:name=".activity.DetalhesProdutoActivity"
+            android:parentActivityName=".activity.AnunciosActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.CadastrarAnuncioActivity"
+            android:parentActivityName=".activity.AnunciosActivity"
             android:exported="false" />
         <activity
             android:name=".activity.MeusAnunciosActivity"
+            android:parentActivityName=".activity.AnunciosActivity"
             android:exported="false"
             android:theme="@style/Theme.CampusDeals" />
         <activity
             android:name=".activity.LoginActivity"
+            android:parentActivityName=".activity.AnunciosActivity"
             android:exported="false" />
         <activity
             android:name=".activity.SignUpActivity"
+            android:parentActivityName=".activity.AnunciosActivity"
             android:exported="false" />
         <activity
             android:name=".activity.AnunciosActivity"
+            android:parentActivityName=".activity.AnunciosActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
