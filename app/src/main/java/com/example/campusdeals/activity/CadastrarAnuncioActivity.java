@@ -255,9 +255,11 @@ public class CadastrarAnuncioActivity extends AppCompatActivity
     }
 
     private void carregarDadosSpinner() {
+
         String[] estados = getResources().getStringArray(R.array.estados);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
                 this, android.R.layout.simple_spinner_item, estados);
+
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         campoEstado.setAdapter(adapter);
 
